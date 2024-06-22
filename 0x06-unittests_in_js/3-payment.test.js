@@ -9,5 +9,6 @@ describe('sendPaymentRequestToApi', () => {
     sendPaymentRequestToApi(100, 20);
     expect(cctv.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
     expect(cctv.calculateNumber.callCount).to.equal(1);
+    cctv.calculateNumber.restore();
   });
 });
