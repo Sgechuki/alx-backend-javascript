@@ -18,7 +18,7 @@ function countStudents(path) {
       }
     }
     Object.entries(fieldObj).forEach(([key, value]) => {
-      console.log(`Number of students in ${key}: ${value.count}. List: ${value.firstName}`);
+      console.log(`Number of students in ${key}: ${value.count}. List: ${value.firstName.join(', ')}`);
     });
   } else {
     throw new Error('Cannot load the database');
